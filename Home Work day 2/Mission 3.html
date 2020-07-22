@@ -7,15 +7,21 @@
 <body>
     <Script>
         'use script'
-      
-        var a = 1, b = 1, c, d;
-        c = ++a; alert(c);           // 2
-        d = b++; alert(d);           // 1
-        c = (2+ ++a); alert(c);      // 5
-        d = (2+ b++); alert(d);      // 4
-        alert(a);                    // 3
-        alert(b);                    // 3
-
+        var a = parseInt(prompt("Введите любое число А:"));
+        var b = parseInt(prompt("Введите любое число B:"));
+        if (a>=0 && b>=0) {
+            var d = a - b;
+            alert("Оба числа положительны, будем вычитать В из А");
+            alert(d);
+        }  else if(a<=0 && b<=0) {
+            var d = a * b;
+            alert("Оба числа отрицательны, будем умножать В на А");
+            alert(d);
+        }  else if((a>=0 && b<=0) || (a<=0 && b>=0)) {
+            var d = a + b;
+            alert("Числа имеют разный знак, будем складывать В на А");
+            alert(d);            
+        }
         
     </Script>
 </body>
