@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mission 1</title>
+
+
+</head>
+
+<body>
+    <Script>
+        'use script'
+
+        var digit = {
+            number: Math.round(Math.random() * 1500),
+            units: 0,
+            tens: 0,
+            sotni: 0,
+        };
+        if (digit.number <= 999 && digit.number > 0) {
+
+            digit.sotni = Math.floor(digit.number / 100);
+            digit.tens = Math.floor((digit.number - (digit.sotni * 100)) / 10);
+            digit.units = digit.number - ((digit.sotni * 100) + (digit.tens * 10));
+            console.log('получилось число: ' + digit.number)
+            console.log(digit);
+        } else if (digit.number == 0) {
+            console.log('число ровно 0')
+        } else {
+            console.log('получилось число: ' + digit.number)
+            console.log('Вы ввели число за диапазоном 0 - 999');
+        }
+        
+    </Script>
+</body>
+
+</html>
