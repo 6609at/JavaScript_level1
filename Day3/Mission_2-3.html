@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mission 2-3</title>
+</head>
+
+<body>
+    <Script>
+        'use script'
+
+
+        
+        var basket = [ //Наш массив с продуктами в карзине
+            {
+                title: "product1",
+                price: 100,
+                count: 4
+            },
+            {
+                title: "product2",
+                price: 200,
+                count: 5
+            },
+            {
+                title: "product3",
+                price: 300,
+                count: 1
+            }
+
+        ];
+        function countBasketPrice(basket) { //Наша функция считает всю сумму за все продукты 
+            var summ = 0; //изначально у нас всегда начинается с нуля. Клиент нам ничего не должен сразу)))
+            for (i = 0; i < basket.length; i++) { //запускаем цикл. Цикл будет заходить в карзину столько раз,сколько продуктов в карзине
+                summ = summ + (basket[i].price * basket[i].count); //крутим функцию умножая число на стоимость
+            }
+            return summ; //вернули полную сумму
+        }
+        var a = countBasketPrice(basket); //вызвали функцию
+        console.log("Сумма в карзине: " + a); //и вывели ее в консоль
+
+
+
+    </Script>
+</body>
+
+</html>

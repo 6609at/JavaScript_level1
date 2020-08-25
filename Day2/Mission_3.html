@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mission 3</title>
+</head>
+<body>
+    <Script>
+        'use script'
+        var a = parseInt(prompt("Введите любое число А:"));
+        var b = parseInt(prompt("Введите любое число B:"));
+        if (a>=0 && b>=0) {
+            var d = a - b;
+            alert("Оба числа положительны, будем вычитать В из А");
+            alert("Ответ: " + d);
+        }  else if(a<=0 && b<=0) {
+            var d = a * b;
+            alert("Оба числа отрицательны, будем умножать В на А");
+            alert("Ответ: " + d);
+        }  else if((a>=0 && b<=0) || (a<=0 && b>=0)) {
+            var d = a + b;
+            alert("Числа имеют разный знак, будем складывать В на А");
+            alert("Ответ: " + d);            
+        } else {
+            alert("Я не знаю как мне быть, попрубейте еще раз")
+        }
+        
+    </Script>
+</body>
+</html>
