@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mission 1</title>
+ 
+    <script>
+            function changePic() {
+                var big = document.getElementById('big'); // Нашли большой блок
+                big.innerHTML = '';  //Обнуление
+                var smallSrc = event.currentTarget.getAttribute('src'); // нашли путь картики
+                var newImg = document.createElement('img'); // создаем новое изображение
+                newImg.src = smallSrc.replace('small', 'big'); // меняем путь картики с название small/ на big/
+                newImg.onerror = function() {
+                    alert('Картинка не смогла загрузиться :(');
+                }
+                big.appendChild(newImg); // создаем новый элемент
+                newImg.setAttribute ('alt', 'img not found');
+            }
+            
+    </script>
+
+</head>
+<body>
+
+        <div class="container">
+            <div id="big">
+                <img src="big/1.jpeg" alt="big">
+            </div>
+            <div id="gallary">
+                <img src="small/1.jpeg" onclick="changePic()"  alt="1" id="image_1" class="image">
+                <img src="small/2.jpeg" onclick="changePic()"  alt="2" id="image_2" class="image">
+                <img src="small/3.jpeg" onclick="changePic()"  alt="3" id="image_3" class="image">
+            </div>
+        </div>
+</body>
+</html>
